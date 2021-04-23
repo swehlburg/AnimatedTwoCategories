@@ -4,6 +4,7 @@ using Colors, Compose
 using Cairo, Fontconfig
 using Plots
 import FileIO
+import Cairo, Fontconfig
 
 using Compose: circle, rectangle
 
@@ -14,6 +15,6 @@ include("keyFrames.jl")
 
 set_default_graphic_size(10cm, 10cm)
 
-main() = keyFrames.main()
+main() = main_func()
 
 end # module

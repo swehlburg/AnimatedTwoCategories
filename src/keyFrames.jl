@@ -6,13 +6,11 @@ import Cairo, Fontconfig
 
 using Compose: circle, rectangle
 
-export main
-
 include("Assisting Files/Disk.jl")
 
 set_default_graphic_size(10cm, 10cm)
 
-function main()
+function main_func()
 
     num_steps = 5
 
@@ -93,5 +91,3 @@ function main()
     gif(anim, "Saved Images/Rotating Cicles.gif", fps = 30)
     
 end
-
-main()
