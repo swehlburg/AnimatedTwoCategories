@@ -1,0 +1,11 @@
+ERROR: LoadError: Ooops
+Stacktrace:
+ [1] error(s::String)
+   @ Base .\error.jl:33
+ [2] top-level scope
+   @ ~\Desktop\Honors Thesis\Final Submission\Test Packages\HelloWorld\deps\build.jl:1
+ [3] include(fname::String)
+   @ Base.MainInclude .\client.jl:444
+ [4] top-level scope
+   @ none:5
+in expression starting at C:\Users\steph\Desktop\Honors Thesis\Final Submission\Test Packages\HelloWorld\deps\build.jl:1
