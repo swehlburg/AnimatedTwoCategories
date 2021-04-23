@@ -2,6 +2,7 @@ using Colors, Compose
 using Cairo, Fontconfig
 using Plots
 import FileIO
+import Cairo, Fontconfig
 
 using Compose: circle, rectangle
 
