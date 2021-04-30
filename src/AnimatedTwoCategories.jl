@@ -76,7 +76,7 @@ module AnimatedTwoCategories
             parameter_v = Vector{Complex}()
             for p_index in 1:length(value.parameters)
                 shifted1 = frame1[key].parameters[p_index] - complex(center[1], center[2])
-                shifted2 = frame2[key].parameters[p_index] - complex(Center[1], center[2])
+                shifted2 = frame2[key].parameters[p_index] - complex(center[1], center[2])
 
                 new_angle = (weight * angle(shifted1)) + ((1-weight) * angle(shifted2))
                 new_radius = (weight * abs(shifted1)) + ((1-weight) * abs(shifted2))
