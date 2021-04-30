@@ -36,8 +36,8 @@ module AnimatedTwoCategories
             frame = compose(context())
             for key_frame_index in 2:length(keyframes)
                 for i in 2:frames_per_keyframe
-                    animation1 = universal(type1, keyframes[i-1], keyframes[i], (i/frames_per_keyframe), polar_shift1)
-                    animation2 = universal(type2, keyframes[i-1], keyframes[i], (i/frames_per_keyframe), polar_shift2)
+                    animation1 = universal(type1, keyframes[key_frame_index-1], keyframes[key_frame_index], (i/frames_per_keyframe), polar_shift1)
+                    animation2 = universal(type2, keyframes[key_frame_index-1], keyframes[key_frame_index], (i/frames_per_keyframe), polar_shift2)
                     final = cartesian_linear(animation1, animation2, (animation_index/frames_per_animation))
                     frame = compose(context(), disk_compose_single_base(expression, final, 0), frame)
                 end
@@ -49,7 +49,7 @@ module AnimatedTwoCategories
     function one_morphism(expression::Expr, keyframes, frames_per_keyframe, type::AnimationType, file_path, polar_shift = (0,0))
         for key_frame_index in 2:length(keyframes)
             for i in 1:frames_per_keyframe
-                frame = compose(context(), disk_compose_single_base(expression, universal(type, keyframes[i-1], keyframes[i], (i/frames_per_keyframe), polar_shift), 0))
+                frame = compose(context(), disk_compose_single_base(expression, universal(type, keyframes[key_frame_index-1], keyframes[key_frame_index], (i/frames_per_keyframe), polar_shift), 0))
                 draw(PNG(string(file_path, string(((key_frame_index - 1)*frames_per_keyframe) + i), ".png"), 10cm, 10cm, dpi=250), frame)
             end
         end
