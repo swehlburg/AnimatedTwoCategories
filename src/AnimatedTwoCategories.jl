@@ -35,7 +35,7 @@ module AnimatedTwoCategories
         for animation_index in 1:frames_per_animation
             frame = compose(context())
             for key_frame_index in 2:length(keyframes)
-                for i in 1:frames_per_keyframe
+                for i in 2:frames_per_keyframe
                     animation1 = universal(type1, keyframes[i-1], keyframes[i], (i/frames_per_keyframe), polar_shift1)
                     animation2 = universal(type2, keyframes[i-1], keyframes[i], (i/frames_per_keyframe), polar_shift2)
                     final = cartesian_linear(animation1, animation2, (animation_index/frames_per_animation))
