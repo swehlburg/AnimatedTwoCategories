@@ -8,7 +8,7 @@ module AnimatedTwoCategories
 
     using Compose: circle, rectangle
 
-    export main
+    export main, create_animation, two_morphism, one_morphism, universal, polar_linear, cartesian_linear, AnimationType
 
     include("Assisting Files/Disk.jl")
     include("keyFrames.jl")
