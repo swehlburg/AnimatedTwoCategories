@@ -70,7 +70,7 @@ module AnimatedTwoCategories
 
             radius_v = Vector{Float64}()
             for r_index in 1:length(value.radius)
-                push!(radius_v, (weight * frame1[key].radius[r_index]) + ((1-weight) * frame1[key].radius[r_index]))
+                push!(radius_v, (weight * frame1[key].radius[r_index]) + ((1-weight) * frame2[key].radius[r_index]))
             end
 
             parameter_v = Vector{Complex}()
@@ -97,12 +97,12 @@ module AnimatedTwoCategories
 
             radius_v = Vector{Float64}()
             for r_index in 1:length(value.radius)
-                push!(radius_v, (weight * frame1[key].radius[r_index]) + ((1-weight) * frame1[key].radius[r_index]))
+                push!(radius_v, (weight * frame1[key].radius[r_index]) + ((1-weight) * frame2[key].radius[r_index]))
             end
 
             parameter_v = Vector{Complex}()
             for p_index in 1:length(value.parameters)
-                push!(parameter_v, (weight * frame1[key].parameters[p_index]) + ((1-weight) * frame1[key].parameters[p_index]))
+                push!(parameter_v, (weight * frame1[key].parameters[p_index]) + ((1-weight) * frame2[key].parameters[p_index]))
             end
 
             transition[key] = Disk(weighted_color_mean(weight, frame1[key].color, frame2[key].color), radius_v, parameter_v)
