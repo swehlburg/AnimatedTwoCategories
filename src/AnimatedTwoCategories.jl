@@ -48,7 +48,7 @@ module AnimatedTwoCategories
         for key_frame_index in 2:length(keyframes)
             for i in 1:frames_per_keyframe
                 frame = compose(context(), disk_compose_single_base(expression, universal(type, keyframes[i-1], keyframes[i], (i/frames_per_keyframe), polar_shift), 0))
-                draw(PNG(string(file_path, string(((key_frame_index - 1)*frames_per_keyframe) i), ".png"), 10cm, 10cm, dpi=250), frame)
+                draw(PNG(string(file_path, string(((key_frame_index - 1)*frames_per_keyframe) + i), ".png"), 10cm, 10cm, dpi=250), frame)
             end
         end
     end
