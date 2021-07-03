@@ -1,2 +1,2 @@
-# AnimatedTwoCategories.jl
+# TwoCatsDancing.jl
  
